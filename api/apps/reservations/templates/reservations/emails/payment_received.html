@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Seznamovak email template</title>
+
+        <style type="text/css">
+            .ReadMsgBody {
+                width: 100%;
+                background-color: #ffffff;
+            }
+            .ExternalClass {
+                width: 100%;
+                background-color: #ffffff;
+            }
+            body {
+                width: 100%;
+                background-color: #ffffff;
+                margin: 0;
+                padding: 0;
+                -webkit-font-smoothing: antialiased;
+                font-family: "Montserrat", sans-serif;
+            }
+            table {
+                border-collapse: collapse;
+            }
+
+            .social-image {
+                width: 80px;
+                display: block;
+            }
+
+            @media only screen and (max-width: 640px) {
+                .deviceWidth {
+                    width: 440px !important;
+                    padding: 0;
+                }
+                .center {
+                    text-align: center !important;
+                }
+                .social-image {
+                    width: 40px;
+                }
+            }
+
+            @media only screen and (max-width: 479px) {
+                .deviceWidth {
+                    width: 280px !important;
+                    padding: 0;
+                }
+                .center {
+                    text-align: center !important;
+                }
+                .social-image {
+                    width: 20px;
+                }
+            }
+
+            .cancel-reservation-button {
+                background-color: #e25525;
+                padding: 10px 20px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                display: block;
+                margin: 0 auto;
+            }
+
+            @media only screen and (max-width: 640px) {
+                .logo-image {
+                    width: 120px;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+        </style>
+    </head>
+
+    <body
+        leftmargin="0"
+        topmargin="0"
+        marginwidth="0"
+        marginheight="0"
+        style="font-family: 'Montserrat', sans-serif"
+    >
+        <!-- Wrapper -->
+        <table
+            width="100%"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            align="center"
+        >
+            <tr>
+                <td
+                    width="100%"
+                    valign="top"
+                    bgcolor="#ffffff"
+                    style="padding-top: 20px"
+                >
+                    <!-- 3 Column Header -->
+                    <table
+                        width="580"
+                        cellpadding="0"
+                        cellspacing="0"
+                        align="center"
+                        class="deviceWidth"
+                        bgcolor="#e25525"
+                        style="margin: 0 auto"
+                    >
+                        <tr>
+                            <td valign="top">
+                                <table
+                                    width="32%"
+                                    align="left"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    class="deviceWidth"
+                                >
+                                    <tr>
+                                        <td
+                                            style="padding: 20px 10px 20px 20px"
+                                        >
+                                            <a href="https://seznamovak.utb.cz/"
+                                                ><img
+                                                    src="https://i.ibb.co/gWfZ8v7/seznamovak-logo.png"
+                                                    alt="Seznamovák logo"
+                                                    border="0"
+                                                    width="120"
+                                                    class="logo-image"
+                                            /></a>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Column 1 -->
+
+                                <table
+                                    width="32%"
+                                    align="left"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    class="deviceWidth"
+                                >
+                                    <tr>
+                                        <td
+                                            valign="top"
+                                            align="center"
+                                            style="padding: 20px 0"
+                                        >
+                                            <p
+                                                style="
+                                                    mso-table-lspace: 0;
+                                                    mso-table-rspace: 0;
+                                                    margin: 0;
+                                                    color: #222b45;
+                                                    font-size: 18px;
+                                                    font-weight: bold;
+                                                "
+                                            >
+                                                {{ turnus_number }}. Turnus
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Column 2 -->
+
+                                <table
+                                    width="32%"
+                                    align="left"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    class="deviceWidth"
+                                >
+                                    <tr>
+                                        <td
+                                            valign="top"
+                                            align="center"
+                                            style="padding: 20px 0"
+                                        >
+                                            <p
+                                                style="
+                                                    mso-table-lspace: 0;
+                                                    mso-table-rspace: 0;
+                                                    margin: 0;
+                                                    color: #222b45;
+                                                    font-size: 18px;
+                                                    font-weight: bold;
+                                                "
+                                            >
+                                                {{ turnus_date }}
+                                                <!-- 29. 8 – 1. 9. 2022 -->
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Column 3 -->
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- End 3 Column Header -->
+
+                    <!-- One Column Main -->
+                    <table
+                        width="580"
+                        class="deviceWidth"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        align="center"
+                        bgcolor="#ffffff"
+                        style="margin: 0 auto"
+                    >
+                        <tr>
+                            <td
+                                style="
+                                    font-size: 13px;
+                                    color: #222b45;
+                                    text-align: left;
+                                    font-family: 'Montserrat', sans-serif;
+                                    line-height: 24px;
+                                    vertical-align: top;
+                                    padding: 10px 8px 10px 8px;
+                                "
+                                bgcolor="#ffffff"
+                            >
+                                <p>
+                                    Ahoj!
+                                    <br />
+                                    Děkujeme, <b>Tvou platbu zálohy jsme v pořádku obdrželi</b>.
+                                </p>
+
+                                <p>
+                                    Tímto e-mailem závazně potvrzujeme Tvou registraci na
+                                    Seznamovák UTB {{ year }}, {{ turnus_number }}. turnus.
+                                </p>
+
+                                <p>
+                                    Doplatek ve výši <b>{{ balance_czk }},- Kč</b> zaplatíš v den příjezdu,
+                                    a to pouze <b>hotově v českých korunách</b>.
+                                    Nezapomeň si do kalendáře zaznamenat termín
+                                    <b>{{ turnus_date }}</b>.
+                                </p>
+
+                                <p>Těšíme se na Tebe!</p>
+
+                                <p>Tým Seznamováku UTB</p>
+
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- End One Column Main -->
+
+                    <div style="height: 15px; margin: 0 auto">&nbsp;</div>
+                    <!-- spacer -->
+
+                    <!-- 3 Column Footer -->
+                    <table
+                        width="580"
+                        cellpadding="0"
+                        cellspacing="0"
+                        align="center"
+                        class="deviceWidth"
+                        bgcolor="#e25525"
+                        style="margin: 0 auto"
+                    >
+                        <tr>
+                            <td valign="top">
+                                <table
+                                    width="40%"
+                                    align="left"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    class="deviceWidth"
+                                >
+                                    <tr>
+                                        <td
+                                            style="padding: 20px 10px 20px 20px"
+                                        >
+                                            <b
+                                                style="
+                                                    font-size: 14px;
+                                                    color: #222b45;
+                                                    font-weight: bold;
+                                                    font-family: 'Montserrat',
+                                                        sans-serif;
+                                                    text-transform: uppercase;
+                                                "
+                                                >Studentská Unie</b
+                                            >
+                                            <p
+                                                style="
+                                                    color: #222b45;
+                                                    text-align: left;
+                                                    font-size: 13px;
+                                                    line-height: 17px;
+                                                "
+                                            >
+                                                Jsme tu pro tebe, pokud se budeš
+                                                chtít na cokoliv zaptat, ozvi se
+                                                nám na profil.
+                                                <br />
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Column 1 -->
+
+                                <table
+                                    width="24%"
+                                    align="left"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    class="deviceWidth"
+                                >
+                                    <tr>
+                                        <td
+                                            valign="top"
+                                            align="center"
+                                            style="padding: 22px 0"
+                                        >
+                                            <p
+                                                style="
+                                                    mso-table-lspace: 0;
+                                                    mso-table-rspace: 0;
+                                                    margin: 0;
+                                                "
+                                            >
+                                                <a
+                                                    href="https://www.facebook.com/studentskaunieutb/"
+                                                    ><img
+                                                        width="80"
+                                                        src="https://i.ibb.co/s9vdzW7/su-fb.png"
+                                                        alt="Studentská unie Facebook"
+                                                        border="0"
+                                                        class="social-image"
+                                                /></a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Column 2 -->
+
+                                <table
+                                    width="24%"
+                                    align="left"
+                                    cellpadding="0"
+                                    cellspacing="0"
+                                    class="deviceWidth"
+                                >
+                                    <tr>
+                                        <td
+                                            valign="top"
+                                            align="center"
+                                            style="padding: 22px 0"
+                                        >
+                                            <p
+                                                style="
+                                                    mso-table-lspace: 0;
+                                                    mso-table-rspace: 0;
+                                                    margin: 0;
+                                                "
+                                            >
+                                                <a
+                                                    href="https://www.instagram.com/studentskaunieutb/"
+                                                    ><img
+                                                        width="80"
+                                                        src="https://i.ibb.co/Rg6bkbj/su-ig.png"
+                                                        alt="Studentská unie Instagram"
+                                                        border="0"
+                                                        class="social-image"
+                                                /></a>
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <!-- End Column 3 -->
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- End 3 Column Footer -->
+
+                    <div style="height: 15px; margin: 0 auto">&nbsp;</div>
+                    <!-- spacer -->
+                </td>
+            </tr>
+        </table>
+        <!-- End Wrapper -->
+        <div
+            style="
+                display: none;
+                white-space: nowrap;
+                font: 15px courier;
+                color: #222b45;
+            "
+        >
+            - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        </div>
+    </body>
+</html>
