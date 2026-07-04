@@ -1,0 +1,33 @@
+{% extends "admin/change_list.html" %}
+
+{% block object-tools-items %}
+  {% for batch in stats.batches %}
+    <li><a href="{% url 'admin:reservations_reservation_pdf' batch.number %}">Export PDF – {{ batch.number }}. turnus</a></li>
+  {% endfor %}
+  {{ block.super }}
+{% endblock %}
+
+{% block content %}
+  <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;">
+    <div style="border: 1px solid var(--hairline-color); padding: 12px 16px; min-width: 160px;">
+      <strong>Rezervace</strong><br>
+      Celkem: {{ stats.total }}<br>
+      Zaplaceno: {{ stats.paid }}<br>
+      Nezaplaceno: {{ stats.unpaid }}
+    </div>
+    {% for batch in stats.batches %}
+      <div style="border: 1px solid var(--hairline-color); padding: 12px 16px; min-width: 160px;">
+        <strong>{{ batch.number }}. turnus</strong><br>
+        Zbývá: {{ batch.remaining }} / {{ batch.capacity }}<br>
+        Náhradníci: {{ batch.substitutes }}
+      </div>
+    {% endfor %}
+    <div style="border: 1px solid var(--hairline-color); padding: 12px 16px; min-width: 160px;">
+      <strong>Fakulty</strong><br>
+      {% for faculty in stats.faculties %}
+        {{ faculty.abbrev }}: {{ faculty.total }}<br>
+      {% endfor %}
+    </div>
+  </div>
+  {{ block.super }}
+{% endblock %}
